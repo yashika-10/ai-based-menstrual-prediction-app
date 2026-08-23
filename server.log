@@ -1,0 +1,6 @@
+
+> sakhi-menstrual-health-app@1.0.0 start
+> node server/server.js
+
+SAKHI backend running on http://localhost:5000
+MongoDB connected
