@@ -1,18 +1,39 @@
 {
   "name": "sakhi-menstrual-health-app",
-  "version": "1.0.0",
-  "description": "SAKHI AI-powered menstrual health tracking and prediction app with Express, MongoDB, and a lightweight ML prediction engine.",
-  "main": "server/server.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "SAKHI — a privacy-conscious menstrual health and wellness companion: cycle tracking, symptom and mood logging, PCOS and pregnancy journals, analytics, and a context-aware AI assistant.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "node server/server.js"
+    "dev": "netlify dev --port 8889",
+    "dev:client": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.5"
+    "@anthropic-ai/sdk": "^1.9.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@netlify/database": "^2.0.3",
+    "@netlify/identity": "^2.0.1",
+    "@netlify/server": "^0.1.6",
+    "drizzle-orm": "^1.0.0-beta.22",
+    "express": "^5.3.0",
+    "lucide-react": "^1.74.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@vitejs/plugin-react": "^6.3.0",
+    "drizzle-kit": "^1.0.0-beta.22",
+    "jsdom": "^31.0.1",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
   }
 }
